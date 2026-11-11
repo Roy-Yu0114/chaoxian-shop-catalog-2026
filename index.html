@@ -1,92 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#2E7D32">
-<meta name="description" content="潮鮮蔬店｜生鮮蔬菜、冷凍肉品、水產、豆製品等完整商品目錄與每日供餐菜單查詢。">
-<title>潮鮮蔬店｜線上蔬果與食材採購</title>
-<link rel="icon" href="images/favicon.ico">
-<link rel="stylesheet" href="style.css?v=20261111-v101">
-<link rel="stylesheet" href="public.css?v=20261111-v101">
-<script defer src="data.js?v=20261111-v101"></script>
-<script defer src="app.js?v=20261111-v101"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="refresh" content="0;url=https://surfo25888052.myqnapcloud.com:8086/psi/index.html">
+<link rel="canonical" href="https://surfo25888052.myqnapcloud.com:8086/psi/index.html">
+<title>潮鮮蔬店｜原始線上商城</title>
+<style>
+body{margin:0;padding:24px;background:#f5f5f5;color:#243327;font:16px/1.7 "Noto Sans TC","Microsoft JhengHei",sans-serif}
+main{max-width:640px;margin:12vh auto;padding:30px;background:#fff;border-radius:12px;border:1px solid #d6e6d9}
+h1{color:#2e7d32;font-size:25px}a{color:#1b7030;font-weight:700;overflow-wrap:anywhere}
+</style>
+<script>window.location.replace("https://surfo25888052.myqnapcloud.com:8086/psi/index.html");</script>
 </head>
-<body class="shop-page shop-index-page">
-<header>
-<div class="logo-group">
-<img alt="潮鮮蔬店" class="logo" src="images/logo.png">
-<h1 class="title">潮鮮蔬店線上蔬果採購平台</h1>
-</div>
-<div class="public-header-actions">
-<button class="page-btn public-header-btn active" type="button" data-view="products">商品選購</button>
-<button class="page-btn public-header-btn" type="button" data-view="menus">每日菜單</button>
-<button class="page-btn public-header-btn" type="button" data-view="basket">採購需求 <span id="cart-count" class="cart-badge">0</span></button>
-</div>
-</header>
-<div class="public-service-note" role="note">
-<strong>商品與菜單查詢服務</strong>
-<span>可瀏覽商品、保存採購需求與下載清單。正式訂單需經會員訂購服務或業務專員確認；此頁不會自動建立或傳送訂單。</span>
-</div>
-<main class="shop-main">
-<section class="public-view is-open" id="products-view" aria-labelledby="products-title">
-<div class="top-wrap">
-<h2 id="products-title">商品選購</h2>
-<div class="toolbar">
-<input class="grow" id="searchInput" name="searchInput" placeholder="搜尋商品名稱、規格或料號" type="search" aria-label="搜尋商品">
-<select id="sortSelect" aria-label="商品排序">
-<option value="sku">依料號排序</option>
-<option value="name">依商品名稱排序</option>
-<option value="priceAsc">售價由低到高</option>
-<option value="priceDesc">售價由高到低</option>
-</select>
-<button class="menu-query-btn" data-view="menus" type="button">查詢供餐菜單</button>
-<button data-view="basket" type="button">我的採購需求</button>
-</div>
-<div class="shop-filter-chips" id="category-bar" aria-label="商品分類篩選"></div>
-<div class="public-summary-row"><span id="product-count"></span><span id="price-update"></span></div>
-</div>
-<section class="shop-products-panel">
-<div class="grid" id="product-list" aria-live="polite"></div>
-<div class="shop-pagination-bar" id="pagination"></div>
-</section>
-</section>
-<section class="public-view" id="menus-view" aria-labelledby="menus-title">
-<div class="public-content">
-<h2 id="menus-title">每日供餐菜單</h2>
-<p class="public-muted">完整月份行事曆可切換歷史與後續月份。星期日不列入標準供餐菜單。</p>
-<div class="public-calendar-toolbar">
-<button class="page-btn" id="prev-month" type="button" aria-label="上一個月">〈 上個月</button>
-<input id="menu-month" type="month" min="2026-01" max="2026-12" aria-label="選擇菜單月份">
-<button class="page-btn" id="next-month" type="button" aria-label="下一個月">下個月 〉</button>
-<button type="button" id="download-menu" class="page-btn">下載本月菜單 CSV</button>
-</div>
-<div class="public-calendar" id="menu-calendar" aria-label="供餐菜單月曆"></div>
-<div class="public-menu-day" id="menu-detail" aria-live="polite"></div>
-</div>
-</section>
-<section class="public-view" id="basket-view" aria-labelledby="basket-title">
-<div class="public-content">
-<h2 id="basket-title">我的採購需求清單</h2>
-<p class="public-muted">可調整數量並下載CSV，供與業務窗口確認採購。需求清單保存在此瀏覽器，不會自動傳送至訂單系統。</p>
-<div id="basket-list" aria-live="polite"></div>
-<div class="public-basket-summary">
-<strong>需求金額合計 <span id="basket-total">NT$0</span></strong>
-<div class="public-actions">
-<button class="page-btn" id="copy-basket" type="button">複製採購需求</button>
-<button class="page-btn" id="download-basket" type="button">下載採購需求 CSV</button>
-<button class="page-btn" id="clear-basket" type="button">清空需求</button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer><p>© 2026 潮鮮蔬店｜專業食材供應與配送服務</p></footer>
-<nav class="public-mobile-tabs" aria-label="手機主要功能">
-<button data-view="products" type="button">🛍️ 商品</button>
-<button data-view="menus" type="button">📅 菜單</button>
-<button data-view="basket" type="button">🛒 需求 <span id="mobile-cart-count">0</span></button>
-</nav>
-<div id="notice" role="status" aria-live="polite" class="public-toast" hidden></div>
-</body>
-</html>
+<body><main><h1>潮鮮蔬店｜線上商城</h1>
+<p>此入口已恢復導向原始潮鮮蔬店商城，保留原有介面與功能。</p>
+<p><a href="https://surfo25888052.myqnapcloud.com:8086/psi/index.html">進入原始線上商城</a></p>
+<noscript><p>若未自動開啟，請點擊上方連結。</p></noscript>
+</main></body></html>
